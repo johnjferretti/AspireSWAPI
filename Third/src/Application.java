@@ -28,20 +28,6 @@ public class Application {
 		}
 
 		
-		
-		URL url2 = new URL("https://swapi.dev/api/people/");
-		System.out.println("Verifying people end point response = 200...");
-		try {
-			HttpURLConnection conn = (HttpURLConnection) url2.openConnection();
-			conn.setRequestMethod("GET");
-			conn.setRequestProperty("Accept", "application/json");
-			System.out.println("Response Code is: " + conn.getResponseCode());
-			assertTrue(conn.getResponseCode() == 200, "Error! Invalid response code.");
-		} catch (MalformedURLException e) {
-			e.printStackTrace();
-		}
-		
-		
 	}
 	
 }
